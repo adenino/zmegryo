@@ -18,11 +18,13 @@
     <p>la bonne affaire est au coin de la rue ! Vendez, Acheter fixer des rencontres avec les vendeurs
     	 a cote de chez vous ou ceux qui resident dans toute l'europe </p>
     <p>
-    <?php echo $this->Html->link('Déposez gratuitement vos annonce',array('controller'=>'posts','action'=>'addpost')
+    <?php echo $this->Html->link('Déposez gratuitement vos annonce',array('controller'=>'posts','action'=>'ajoutannonce')
     ,array('class'=>'btn btn-primary btn-larg')); ?>
     </p>
     </div>
-       
+    <?php foreach($cities as $k=>$v):?>
+	   <?php echo $v['City']['name']."<br />";?>
+    <?php endforeach;?>	   
     
 </div>
 <div>
